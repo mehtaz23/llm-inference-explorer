@@ -1,0 +1,9 @@
+# NOTE: on macOS this gives CPU-only inference (no Metal).
+# Use `ollama serve` natively instead for M3 GPU acceleration.
+services:
+  ollama:
+    image: ollama/ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ./models:/root/.ollama
